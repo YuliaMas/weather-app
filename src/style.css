@@ -77,7 +77,7 @@ main {
 }
 
 .current-details strong {
-    color: #f65282;
+    color: #f6306c;
 }
 
 .current-temperature {
@@ -122,10 +122,11 @@ main {
     display: flex;
     justify-content: space-between;
     padding-top: 10px;
+    color: #f6306c;
 }
 
 .weather-forcast-temperature-min {
-    opacity: 0.5;
+    opacity: 0.6;
 }
 
 footer {

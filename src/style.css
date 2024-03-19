@@ -40,6 +40,14 @@ header {
     padding: 15px 30px;
     line-height: 1;
     border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    color: #885df1;
+    background-color: #E8F0FE;
+    border: 2px solid #885df1;
+    padding: 13px 28px;
 }
 
 main {
@@ -86,6 +94,38 @@ main {
 .current-temperature-unit {
     font-size: 28px;
     line-height: 3;
+}
+
+.weather-forcast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.weather-forcast-day {
+    width: 56px;
+    text-align: center;
+}
+
+.weather-forcast-date {
+    padding-bottom: 10px;
+    opacity: 0.5;
+}
+
+.weather-forcast-icon {
+    font-size: 36px;
+}
+
+.weather-forcast-temperatures {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.weather-forcast-temperature-min {
+    opacity: 0.5;
 }
 
 footer {

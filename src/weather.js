@@ -47,7 +47,34 @@ function formatDate(date) {
     return `${day} ${hours}:${minutes}`;
 }
 
+function displayForcast() {
+    let days = ["Sun", "Mon", "Tue", 'Wed', 'Thu'];
+    let icons = ["🌦️", "⛈️", "🌞", "⛅", "🌞"];
+    let tempMax = [12, 14, 20, 18, 21];
+    let tempMin = [8, 10, 14, 12, 15];
+    let forcastHtml = "";
+
+    days.forEach((day, index) => {
+        forcastHtml += `
+        <div class="weather-forcast-day">
+            <div class="weather-forcast-date">${day}</div>
+            <div class="weather-forcast-icon">${icons[index]}</div>
+            <div class="weather-forcast-temperatures">
+                <span class="weather-forcast-temperature-max">
+                     <strong>${tempMax[index]}°</strong>
+                </span>
+                <span class="weather-forcast-temperature-min">${tempMin[index]}°</span>
+            </div>
+        </div>
+        `;
+    });
+
+    let forcastElement = document.querySelector("#forcast");
+    forcastElement.innerHTML = forcastHtml;
+}
+
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", search);
 
 searchCity("Lviv");
+displayForcast();
